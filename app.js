@@ -18,6 +18,7 @@ We'll also pass strings with special symbols, such as 2A3*3a2, 2A3 3a2, and 2_A3
 // Next I need to return the boolean 
 // No split, join, or reverse
 // Create forloop to make str all lowercase and remove spaces and symbols
+// Create another forloop to reverse clnString and compare with reverseStr
 
 
 function palindrome(str) {
@@ -27,19 +28,19 @@ function palindrome(str) {
     for (let i = 0; i < str.length; i++) {
 
     }
-   
-    
-    let reverseStr = clnString
-  //  .split("")    // Have to split first before I could reverse 
-  //.reverse()
-  //  .join("");
+
+     let reverseStr = "";
+        for (let i = clnString.length - 1; i >= 0; i--) {
+         reverseStr += clnString[i];
+        }
 
     console.log("Original argument string is " + str); // now I'm being fancy 
     console.log( "Reverse string is " + reverseStr);
-   return(clnString === reverseStr); 
+  
+    return(clnString === reverseStr); 
 }
 
-console.log(palindrome("Sh  a w n")); 
+console.log(palindrome("E.y.e")); 
 
  
 //testing out this branch
