@@ -17,15 +17,17 @@ We'll also pass strings with special symbols, such as 2A3*3a2, 2A3 3a2, and 2_A3
 // Next I need to remove spaces and non-aplanumeric characters
 // Next I need to return the boolean 
 // No split, join, or reverse
+// Create forloop to make str all lowercase and remove spaces and symbols
+
 
 function palindrome(str) {
     
-    let regEx = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
-    let clnString = str
-   // .split(" ")
-    //.join("")
-    .toLowerCase()
-    .replace(regEx, '');
+    let regEx = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~\W]/g;
+    let clnString = str.toLowerCase().replace(regEx, '');
+    for (let i = 0; i < str.length; i++) {
+
+    }
+   
     
     let reverseStr = clnString
   //  .split("")    // Have to split first before I could reverse 
@@ -37,7 +39,7 @@ function palindrome(str) {
    return(clnString === reverseStr); 
 }
 
-console.log(palindrome("Sha wn")); 
+console.log(palindrome("Sh  a w n")); 
 
  
 //testing out this branch
