@@ -16,20 +16,21 @@ We'll also pass strings with special symbols, such as 2A3*3a2, 2A3 3a2, and 2_A3
 // Now to make my function make all alpanumeric figures lower case
 // Next I need to remove spaces and non-aplanumeric characters
 // Next I need to return the boolean 
+// No split, join, or reverse
 
 function palindrome(str) {
     
     let regEx = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
     let clnString = str
-    .split(" ")
-    .join("")
+   // .split(" ")
+    //.join("")
     .toLowerCase()
     .replace(regEx, '');
     
     let reverseStr = clnString
-    .split("")    // Have to split first before I could reverse 
-    .reverse()
-    .join("");
+  //  .split("")    // Have to split first before I could reverse 
+  //.reverse()
+  //  .join("");
 
     console.log("Original argument string is " + str); // now I'm being fancy 
     console.log( "Reverse string is " + reverseStr);
