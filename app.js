@@ -26,7 +26,6 @@ function palindrome(str) {
     let regEx = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~\W]/g;
     let clnString = str.toLowerCase().replace(regEx, '');
 
-
      let reverseStr = "";
         for (let i = clnString.length - 1; i >= 0; i--) {
          reverseStr += clnString[i];
